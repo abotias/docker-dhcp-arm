@@ -1,0 +1,8 @@
+dhcpd:
+  image: adrianbotias/dhcpd:1.0
+  name: dhcpd
+  net: host
+  volumes:
+    - ./config/dhcpd.conf:/etc/dhcp/dhcpd.conf
+    # persist leases
+    #- ./config/dhcpd.leases:/var/lib/dhcp/dhcpd.leases
